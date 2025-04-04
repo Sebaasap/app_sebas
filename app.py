@@ -10,16 +10,16 @@ year = st.selectbox("Seleccione un año", [2022, 2023, 2024])
 
 if year == 2022:
 
-    tgp_M = gpd.read_parquet('hombres2022.parquet')
-    tgp_F = gpd.read_parquet('mujeres2022.parquet')
+    tgp_M = gpd.read_parquet('hombres22.parquet')
+    tgp_F = gpd.read_parquet('mujeres22.parquet')
 
 elif year == 2023:
-    tgp_M = gpd.read_parquet('hombres2023.parquet')
-    tgp_F = gpd.read_parquet('mujeres2023.parquet')
+    tgp_M = gpd.read_parquet('hombres23.parquet')
+    tgp_F = gpd.read_parquet('mujeres23.parquet')
 
 else:
-    tgp_M = gpd.read_parquet('hombres.parquet')
-    tgp_F = gpd.read_parquet('mujeres.parquet')
+    tgp_M = gpd.read_parquet('hombres24.parquet')
+    tgp_F = gpd.read_parquet('mujeres24.parquet')
 
 
 fig, ax = plt.subplots(1, 2, figsize=(10, 4))
@@ -35,3 +35,4 @@ fig.tight_layout()
 fig.savefig('tgp.png')
 
 st.pyplot(fig)
+
